@@ -42,6 +42,7 @@ pub use sea_orm::{
     QueryTrait
 };
 
+pub use dotenv::dotenv;
 
 // pub use rust_decimal::prelude::*;
 
