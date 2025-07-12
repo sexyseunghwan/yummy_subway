@@ -2,7 +2,6 @@ use crate::common::*;
 
 use crate::models::subway_station::*;
 
-
 #[derive(Debug, Deserialize)]
 pub struct SubwayApiResponse {
     pub page: usize,

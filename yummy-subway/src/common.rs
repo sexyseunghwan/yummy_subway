@@ -38,8 +38,8 @@ pub use getset::{Getters, Setters};
 pub use sea_orm::{
     prelude::{Decimal, Expr},
     ActiveModelBehavior, ColumnTrait, Condition, Database, DatabaseConnection, EntityTrait,
-    FromQueryResult, JoinType, QueryFilter, QueryOrder, QuerySelect, RelationTrait, Select,
-    QueryTrait
+    FromQueryResult, JoinType, QueryFilter, QueryOrder, QuerySelect, QueryTrait, RelationTrait,
+    Select, ActiveValue::Set, NotSet, TransactionTrait, DatabaseTransaction
 };
 
 pub use dotenv::dotenv;

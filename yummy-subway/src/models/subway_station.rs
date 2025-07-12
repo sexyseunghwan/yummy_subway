@@ -1,12 +1,11 @@
 use crate::common::*;
 
-
 #[derive(Debug, Deserialize)]
 pub struct SubwayStation {
     #[serde(rename = "연번")]
     pub seq: u32,
     #[serde(rename = "호선")]
-    pub line: u32,
+    pub line: i32,
     #[serde(rename = "고유역번호(외부역코드)")]
     pub station_id: u32,
     #[serde(rename = "역명")]

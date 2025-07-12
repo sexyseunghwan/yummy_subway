@@ -16,6 +16,7 @@ pub mod store_recommend_tbl;
 pub mod store_type_link_tbl;
 pub mod store_type_major;
 pub mod store_type_sub;
+pub mod subway_info_tbl;
 pub mod user_auth_tbl;
 pub mod user_email_tbl;
 pub mod user_location_detail_tbl;

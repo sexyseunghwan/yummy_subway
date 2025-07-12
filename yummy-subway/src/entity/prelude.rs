@@ -14,6 +14,7 @@ pub use super::store_recommend_tbl::Entity as StoreRecommendTbl;
 pub use super::store_type_link_tbl::Entity as StoreTypeLinkTbl;
 pub use super::store_type_major::Entity as StoreTypeMajor;
 pub use super::store_type_sub::Entity as StoreTypeSub;
+pub use super::subway_info_tbl::Entity as SubwayInfoTbl;
 pub use super::user_auth_tbl::Entity as UserAuthTbl;
 pub use super::user_email_tbl::Entity as UserEmailTbl;
 pub use super::user_location_detail_tbl::Entity as UserLocationDetailTbl;
