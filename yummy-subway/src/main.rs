@@ -7,7 +7,7 @@ use controller::api_controller::*;
 mod models;
 
 mod service;
-use service::{api_service_impl::*, query_service_impl::*};
+use service::{api_service_impl::*, excel_service_impl::*, query_service_impl::*};
 
 mod utils;
 use utils::logger_utils::*;
@@ -25,10 +25,11 @@ async fn main() {
 
     let api_service: ApiServiceImpl = ApiServiceImpl::new();
     let query_service: QueryServiceImpl = QueryServiceImpl::new();
-    let api_controller: ApiController<ApiServiceImpl, QueryServiceImpl> =
-        ApiController::new(api_service, query_service);
-    
-    match api_controller.batch_seoul_subway_one_to_eight().await {
+    let excel_service: ExcelServiceImpl = ExcelServiceImpl::new();
+    let api_controller: ApiController<ApiServiceImpl, QueryServiceImpl, ExcelServiceImpl> =
+        ApiController::new(api_service, query_service, excel_service);
+
+    match api_controller.batch_subways_info_from_excel_to_db().await {
         Ok(_) => (),
         Err(e) => {
             error!("[ERROR][main] {:?}", e);

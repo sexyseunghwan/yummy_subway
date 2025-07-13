@@ -7,12 +7,14 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key)]
     pub seq: i32,
-    pub subway_line: i32,
+    pub subway_line: String,
     pub station_name: String,
+    pub station_eng_name: String,
     #[sea_orm(column_type = "Decimal(Some((20, 16)))")]
     pub lat: Decimal,
     #[sea_orm(column_type = "Decimal(Some((20, 16)))")]
     pub lng: Decimal,
+    pub station_load_addr: String,
     pub reg_dt: DateTime,
     pub chg_dt: Option<DateTime>,
     pub reg_id: String,

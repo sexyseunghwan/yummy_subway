@@ -7,11 +7,13 @@ use crate::models::subway_api_response::*;
 #[derive(Debug, new)]
 pub struct ApiServiceImpl;
 
-impl ApiServiceImpl { }
+impl ApiServiceImpl {}
 
 #[async_trait]
 impl ApiService for ApiServiceImpl {
-    async fn call_seoul_subway_infos_one_to_eight(&self) -> Result<SubwayApiResponse, anyhow::Error> {
+    async fn call_seoul_subway_infos_one_to_eight(
+        &self,
+    ) -> Result<SubwayApiResponse, anyhow::Error> {
         let service_api_url: String = env::var("SEOUL_SUB_API").unwrap_or_else(|e| {
             error!("{:?}", e);
             panic!("{:?}", e);
